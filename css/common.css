@@ -80,7 +80,7 @@ header #searchInput {
     font-size: var(--text-size1);
 }
 header #searchInput:focus {
-    border-color: var(--color-gray3);
+    border-color: var(--color-gray4);
 }
 header #searchBtn {
     position: absolute;
