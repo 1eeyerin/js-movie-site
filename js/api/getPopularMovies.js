@@ -13,7 +13,8 @@ export const getPopularMovies = () => {
       createMovieList({
         data: results,
         isRandom: true,
-        selector: '#popularList',
+        isCarousel: true,
+        selector: '#popularListSection',
         createElementFunc: createMovieCard
       });
     })

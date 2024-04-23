@@ -16,11 +16,11 @@ export const getSearchMovies = () => {
     .then(res => res.json())
     .then(({results}) => {
       console.log(results);
-
       createMovieList({
         data: results,
         isRandom: false,
-        selector: '#searchList',
+        isCarousel: false,
+        selector: '#searchListSection',
         createElementFunc: createMovieCard
       });
     })
