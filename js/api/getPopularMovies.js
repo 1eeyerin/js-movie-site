@@ -9,7 +9,13 @@ export const getPopularMovies = () => {
     .then(res => res.json())
     .then(({results}) => {
       console.log(results);
-      createMovieList(results, true, createMovieCard);
+
+      createMovieList({
+        data: results,
+        isRandom: true,
+        selector: '#popularList',
+        createElementFunc: createMovieCard
+      });
     })
     .catch(err => console.error(err));
 }
