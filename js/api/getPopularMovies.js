@@ -1,5 +1,5 @@
 import {objectToQueryString} from "../utils/objectToQueryString.js";
-import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants";
+import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {createMovieCard, createMovieList} from "../movieList.js";
 
 export const getPopularMovies = () => {

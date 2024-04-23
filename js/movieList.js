@@ -1,4 +1,4 @@
-import {IMG_PATH} from "./api/constants";
+import {IMG_PATH} from "./api/constants/index.js";
 
 const createMovieList = (result, random = false, appendFunc) => {
   const list = document.querySelector('#popularList');
