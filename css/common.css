@@ -6,6 +6,7 @@ body {
     width: var(--size-width1-mobile);
     margin: 0 auto;
     z-index: 0;
+    overflow-y: scroll;
 }
 
 /* ----------------------------------------------------- */
@@ -79,7 +80,7 @@ header #searchInput {
     font-size: var(--text-size1);
 }
 header #searchInput:focus {
-    border-color: var(--color-gray3);
+    border-color: var(--color-gray4);
 }
 header #searchBtn {
     position: absolute;
