@@ -18,17 +18,13 @@ export const getSearchMovies = () => {
     .then(({results}) => {
       console.log(results);
 
-      if (!results?.length) {
-        emptySearchResult('#searchListSection');
-        return;
-      }
-
       createMovieList({
         data: results,
         isRandom: false,
         isCarousel: false,
         selector: '#searchListSection',
-        createElementFunc: createMovieCard
+        createElementFunc: createMovieCard,
+        emptyElementFunc: emptySearchResult
       });
     })
     .catch(err => console.error(err));

@@ -1,9 +1,13 @@
 import {IMG_PATH} from "./api/constants/index.js";
 
-const createMovieList = ({data, isRandom = false, selector, isCarousel = false, createElementFunc}) => {
+const createMovieList = ({data, isRandom = false, selector, isCarousel = false, createElementFunc, emptyElementFunc}) => {
   if (!selector || typeof createElementFunc !== 'function') {
     console.error('createMovieList에 필수 매개변수가 없습니다.');
     return false;
+  }
+
+  if (!data?.length) {
+    return emptyElementFunc?.(selector);
   }
 
   if (isRandom) {
