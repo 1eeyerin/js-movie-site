@@ -14,6 +14,7 @@ This project uses the [TMDB API](https://developer.themoviedb.org/reference/intr
 - [ ] 통신에 실패했을때 UI
 - [x] 랜덤 정렬 기능 추가
 - [x] UI 변경 모드 추가
+- [ ] 모바일 Hover UI 제거
 - [ ] 썸네일 이미지 사이즈 통일
 
 ## 💬 Author
