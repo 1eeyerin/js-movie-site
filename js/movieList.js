@@ -1,16 +1,20 @@
 import {IMG_PATH} from "./api/constants/index.js";
 
-const createMovieList = ({data, isRandom = false, selector, createElementFunc}) => {
+const createMovieList = ({data, isRandom = false, selector, isCarousel = false, createElementFunc}) => {
   if (!selector || typeof createElementFunc !== 'function') {
     console.error('createMovieList에 필수 매개변수가 없습니다.');
     return false;
   }
 
-  const list = document.querySelector(selector);
-
   if (isRandom) {
     data.sort(() => Math.random() - 0.5);
   }
+
+  const section = document.querySelector(selector);
+  const list = document.createElement('ul');
+
+  section.appendChild(list);
+  list.classList.add(isCarousel ? 'carousel' : 'list');
 
   return data.forEach((movie) => list.appendChild(createElementFunc(movie)));
 }
