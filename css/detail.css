@@ -1,0 +1,28 @@
+main {
+    padding: 0 3% 100px;
+}
+
+#detailLnb {
+    padding: 0 3%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#detailLnb #goBackBtn {
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+    -webkit-mask: url(../img/common/arrow-left.svg) no-repeat center /20px;
+    mask: url(../img/common/arrow-left.svg) no-repeat center /20px;
+}
+.detail-header-wrap {
+    position: fixed;
+    top: 0;
+    z-index: var(--zindex-level1);
+    left: 50%;
+    max-width: var(--size-width1-pc);
+    width: var(--size-width1-mobile);
+    transform: translateX(-50%);
+}

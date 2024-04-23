@@ -18,7 +18,7 @@ const createMovieList = ({data, isRandom = false, selector, isCarousel = false, 
   const list = document.createElement('ul');
 
   section.appendChild(list);
-  list.classList.add(isCarousel ? 'carousel' : 'list');
+  list.classList.add('movie-cards', isCarousel ? 'carousel' : 'list');
 
   return data.forEach((movie) => list.appendChild(createElementFunc(movie)));
 }
