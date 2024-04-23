@@ -6,6 +6,7 @@ body {
     width: var(--size-width1-mobile);
     margin: 0 auto;
     z-index: 0;
+    overflow-y: scroll;
 }
 
 /* ----------------------------------------------------- */
