@@ -2,6 +2,7 @@ import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {getQueryParamValue} from "../utils/getQueryString.js";
 import {createMovieCard, createMovieList} from "../movieList.js";
+import emptySearchResult from "../search/emptySearchResult.js";
 
 export const getSearchMovies = () => {
   const searchWord = getQueryParamValue('query');
@@ -16,6 +17,12 @@ export const getSearchMovies = () => {
     .then(res => res.json())
     .then(({results}) => {
       console.log(results);
+
+      if (!results?.length) {
+        emptySearchResult('#searchListSection');
+        return;
+      }
+
       createMovieList({
         data: results,
         isRandom: false,

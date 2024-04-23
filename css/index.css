@@ -67,3 +67,16 @@ main {
 .list .contents img {
     width: 100%;
 }
+
+.no-result {
+    text-align: center;
+    line-height: 1.5;
+    padding: 40px 0 50px;
+}
+
+.no-result span {
+    display: block;
+    color: var(--color-gray3);
+    font-size: var(--text-size2);
+    margin-top: 10px;
+}
