@@ -24,6 +24,48 @@ body {
     clip: rect(1px, 1px, 1px, 1px);
 }
 
+#custom_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--zindex-level2);
+    pointer-events: none;
+    opacity: 0;
+}
+
+#custom_cursor:not(.small) {
+    width: 60px;
+    height: 60px;
+}
+#custom_cursor.small {
+    width: 0;
+    height: 0;
+}
+.custom_cursor_inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.custom_cursor_circle {
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background: rgba(251, 57, 73, 0.5);
+}
+.custom_cursor_circle {
+    z-index: 1;
+}
+
 /* ----------------------------------------------------- */
 .main-dim {
     position: fixed;
