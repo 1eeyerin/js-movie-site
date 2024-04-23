@@ -16,5 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
 const setSearchKeyword = () => {
   const searchWord = getQueryParamValue('query');
   const input = document.querySelector('#searchInput');
+
   input.value = decodeURIComponent(searchWord);
 }
