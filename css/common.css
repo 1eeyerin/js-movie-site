@@ -36,26 +36,26 @@ body {
     background: var(--color-gray0);
     z-index: -1;
 }
-.header-wrap {
+.gnb-header-wrap {
     position: sticky;
     background: var(--color-gray0);
-    z-index: 100;
+    z-index: var(--zindex-level1);
     top: 0;
 }
-header#gnb {
+#gnb {
     padding: 0 3%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#header .logo {
+#gnb .logo {
     font-weight: 300;
     font-size: 18px;
     line-height: 32px;
     flex-shrink: 0;
 }
-header #logo:before {
+#gnb #logo:before {
     content: '';
     display: inline-block;
     vertical-align: top;
@@ -66,7 +66,7 @@ header #logo:before {
     mask: url(../img/common/camera.svg) no-repeat center /20px;
     margin-right: 6px;
 }
-header #searchInput {
+#gnb #searchInput {
     height: 40px;
     border: 1px solid transparent;
     outline: none;
@@ -79,10 +79,10 @@ header #searchInput {
     padding: 0 45px 0 12px;
     font-size: var(--text-size1);
 }
-header #searchInput:focus {
+#gnb #searchInput:focus {
     border-color: var(--color-gray4);
 }
-header #searchBtn {
+#gnb #searchBtn {
     position: absolute;
     top: 50%;
     margin-top: -12.5px;
@@ -91,11 +91,10 @@ header #searchBtn {
     width: 25px;
     height: 25px;
     background-color: var(--bg-color);
-    color: var(--bg-color);
     -webkit-mask: url(../img/common/search.svg) no-repeat center /20px;
     mask: url(../img/common/search.svg) no-repeat center /20px;
 }
-header .search-box {
+#gnb .search-box {
     flex-grow: 2;
     position: relative;
 }
