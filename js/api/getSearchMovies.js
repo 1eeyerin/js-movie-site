@@ -6,6 +6,7 @@ import emptySearchResult from "../search/emptySearchResult.js";
 import setMoviesResponseNormalized from "../utils/setMoviesResponseNormalized.js";
 
 export const getSearchMovies = () => {
+  return new Promise((resolve) => {
   const searchWord = getQueryParamValue('query');
   const queryOptions = {
     ...DEFAULT_QUERIES,
@@ -14,7 +15,7 @@ export const getSearchMovies = () => {
 
   const queryString = objectToQueryString(queryOptions);
 
-  fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
+  return fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
     .then(res => res.json())
     .then(({results}) => {
       console.log(results);
@@ -29,5 +30,7 @@ export const getSearchMovies = () => {
         emptyElementFunc: emptySearchResult
       });
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error(err))
+    .finally(() => resolve(true));
+  });
 }
