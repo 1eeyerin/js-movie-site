@@ -3,6 +3,7 @@ import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {getQueryParamValue} from "../utils/getQueryString.js";
 import {createMovieCard, createMovieList} from "../movieList.js";
 import emptySearchResult from "../search/emptySearchResult.js";
+import setMoviesResponseNormalized from "../utils/setMoviesResponseNormalized.js";
 
 export const getSearchMovies = () => {
   const searchWord = getQueryParamValue('query');
@@ -17,9 +18,10 @@ export const getSearchMovies = () => {
     .then(res => res.json())
     .then(({results}) => {
       console.log(results);
+      const normalizeResults = setMoviesResponseNormalized(results);
 
       createMovieList({
-        data: results,
+        data: normalizeResults,
         isRandom: false,
         isCarousel: false,
         selector: '#searchListSection',
