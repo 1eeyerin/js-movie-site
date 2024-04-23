@@ -1,0 +1,100 @@
+html {
+    background: var(--color-gray1);
+}
+body {
+    max-width: var(--size-width1-pc);
+    width: var(--size-width1-mobile);
+    margin: 0 auto;
+    z-index: 0;
+}
+
+/* ----------------------------------------------------- */
+.sec-h1 {
+    display: block;
+    font-size: 20px;
+    padding: 50px 0 20px;
+}
+.blind {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* ----------------------------------------------------- */
+.main-dim {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    max-width: var(--size-width1-pc);
+    width: var(--size-width1-mobile);
+    bottom: 0;
+    transform: translateX(-50%);
+    background: var(--color-gray0);
+    z-index: -1;
+}
+.header-wrap {
+    position: sticky;
+    background: var(--color-gray0);
+    z-index: 100;
+    top: 0;
+}
+header#gnb {
+    padding: 0 3%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header .logo {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    flex-shrink: 0;
+}
+header #logo:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    background-color: var(--title-color);
+    -webkit-mask: url(../img/common/camera.svg) no-repeat center /20px;
+    mask: url(../img/common/camera.svg) no-repeat center /20px;
+    margin-right: 6px;
+}
+header #searchInput {
+    height: 40px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    transition: 0.1s;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    padding: 0 45px 0 12px;
+    font-size: var(--text-size1);
+}
+header #searchInput:focus {
+    border-color: var(--color-gray3);
+}
+header #searchBtn {
+    position: absolute;
+    top: 50%;
+    margin-top: -12.5px;
+    right: 12px;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+    -webkit-mask: url(../img/common/search.svg) no-repeat center /20px;
+    mask: url(../img/common/search.svg) no-repeat center /20px;
+}
+header .search-box {
+    flex-grow: 2;
+    position: relative;
+}
