@@ -1,6 +1,13 @@
 import {IMG_PATH} from "./api/constants/index.js";
 
-const createMovieList = ({data, isRandom = false, selector, isCarousel = false, createElementFunc, emptyElementFunc}) => {
+const createMovieList = ({
+  data,
+  isRandom = false,
+  selector,
+  isCarousel = false,
+  createElementFunc,
+  emptyElementFunc,
+}) => {
   if (!selector || typeof createElementFunc !== 'function') {
     console.error('createMovieList에 필수 매개변수가 없습니다.');
     return false;
@@ -18,9 +25,9 @@ const createMovieList = ({data, isRandom = false, selector, isCarousel = false, 
   const list = document.createElement('ul');
 
   section.appendChild(list);
-  list.classList.add(isCarousel ? 'carousel' : 'list');
+  list.classList.add('movie-cards', isCarousel ? 'carousel' : 'list');
 
-  return data.forEach((movie) => list.appendChild(createElementFunc(movie)));
+  data.forEach((movie) => list.appendChild(createElementFunc(movie)));
 }
 
 const createMovieCard = (movie) => {
@@ -29,6 +36,7 @@ const createMovieCard = (movie) => {
 
   const link = document.createElement('a');
   link.href = `./detail.html?movieId=${movie.id}`;
+  link.classList.add('custom_mousemove');
 
   const image = document.createElement('img');
   image.src = `${IMG_PATH}${movie['poster_path']}`;

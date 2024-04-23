@@ -3,8 +3,10 @@ import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {getQueryParamValue} from "../utils/getQueryString.js";
 import {createMovieCard, createMovieList} from "../movieList.js";
 import emptySearchResult from "../search/emptySearchResult.js";
+import setMoviesResponseNormalized from "../utils/setMoviesResponseNormalized.js";
 
 export const getSearchMovies = () => {
+  return new Promise((resolve) => {
   const searchWord = getQueryParamValue('query');
   const queryOptions = {
     ...DEFAULT_QUERIES,
@@ -13,13 +15,14 @@ export const getSearchMovies = () => {
 
   const queryString = objectToQueryString(queryOptions);
 
-  fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
+  return fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
     .then(res => res.json())
     .then(({results}) => {
       console.log(results);
+      const normalizeResults = setMoviesResponseNormalized(results);
 
       createMovieList({
-        data: results,
+        data: normalizeResults,
         isRandom: false,
         isCarousel: false,
         selector: '#searchListSection',
@@ -27,5 +30,7 @@ export const getSearchMovies = () => {
         emptyElementFunc: emptySearchResult
       });
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error(err))
+    .finally(() => resolve(true));
+  });
 }

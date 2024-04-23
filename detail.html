@@ -7,15 +7,38 @@
   <link rel="stylesheet" href="./css/constants.css"/>
   <link rel="stylesheet" href="./css/reset.css"/>
   <link rel="stylesheet" href="./css/common.css"/>
-  <link rel="stylesheet" href="./css/index.css"/>
+  <link rel="stylesheet" href="./css/list.css"/>
+  <link rel="stylesheet" href="./css/detail.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
   <script src="./js/detail/index.js" type="module"></script>
 </head>
 <body>
-<div class="header-wrap" include-html="./html/header.html"></div>
-<main>
-  <div include-html="./html/mock.html"></div>
+<div class="detail-header-wrap" include-html="./html/detail-header.html"></div>
+<main class="detail-page">
+    <section class="feature-section">
+      <div class="detail-bg" style="background-image: url('https://media.themoviedb.org/t/p/w300_and_h450_bestv2/3l04H9ljNegDGG9gnKDhLExJvpz.jpg')"></div>
+    </section>
+    <section class="top-info-section">
+      <div class="detail-thumbnail custom_mousemove">
+        <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/3l04H9ljNegDGG9gnKDhLExJvpz.jpg" alt=""/>
+      </div>
+      <strong class="detail-title">
+        외계+인 2부
+      </strong>
+      <div class="detail-date">(2024)</div>
+      <p class="detail-summary">
+        인간의 뇌 속에 갇혀 있는 외계인 포로들의 탈출을 막으려다 먼 과거에 갇혀버린 이안과 썬더는 시간을 관통하는 문을 열 수 있는 신검을 얻게 된다. 한편, 이안의 탈출을 도왔던 무륵은 자신의 몸에 이상한 존재가 있다는 것을 느끼자 혼란에 빠진다. 무륵의 몸에 숨어있는 외계인으로 의심되는 존재가 이안과 무륵을 추격하기 시작하고, 이안은 미래로 돌아가 외계인과 맞서 하바의 폭발을 막아야만 하는데.  마침내 시간의 문이 열리고 무륵, 이안, 썬더의 비밀이 드러나기 시작한다!
+      </p>
+      <ul class="detail-bottom-information">
+        <li>평점 : 69.581</li>
+        <li>개봉일 : 2024/01/10 (KR)</li>
+        <li>장르 : SF, 액션, 판타지, 모험</li>
+        <li>상영 시간 : 2시간 2분</li>
+      </ul>
+    </section>
 </main>
 <div class="main-dim"></div>
+<div id="custom_cursor"><div class="custom_cursor_inner"><div class="custom_cursor_circle"></div></div></div>
 </body>
 </html>
