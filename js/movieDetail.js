@@ -1,4 +1,4 @@
-import {IMG_PATH} from "./api/constants/index.js";
+import {IMG_PATH, KOR_DATE_FORMAT} from "./api/constants/index.js";
 
 const insertMovieDetail = ({ selector, data }) => {
   const fragment = new DocumentFragment();
@@ -19,9 +19,19 @@ const insertMovieDetail = ({ selector, data }) => {
   thumbnailImg.src = `${IMG_PATH}${data.poster_path}`;
   topInfoSection.appendChild(thumbnailImg);
 
-  const title = document.createElement('h2');
+  const title = document.createElement('h1');
   title.classList.add('detail-title');
-  title.textContent = data.title;
+
+  if (data.title.length > 10) {
+    title.style.fontSize = '58px';
+  }
+
+  data.title.split('').forEach(char => {
+    const span = document.createElement('span');
+    span.textContent = char;
+    title.appendChild(span);
+  });
+
   topInfoSection.appendChild(title);
 
   const date = document.createElement('div');
@@ -39,9 +49,10 @@ const insertMovieDetail = ({ selector, data }) => {
   const bottomInformation = document.createElement('ul');
   bottomInformation.classList.add('detail-bottom-information');
 
+
   const infoItems = [
-    `평점 : ${data.vote_average}`,
-    `개봉일 : ${data.release_date}`,
+    `평점 : ${Math.floor(data.vote_average * 10) / 10}`,
+    `개봉일 : ${new Date(data.release_date).toLocaleDateString('ko-KR', KOR_DATE_FORMAT)}`,
     `장르 : ${data.genres.map(({name}) => name).join(', ')}`,
     `상영 시간 : ${data.runtime}분`
   ];
