@@ -10,11 +10,14 @@ export const getMovieDetail = () => {
 
   return new Promise((resolve) => {
     fetch(`${API_MAIN_PATH}movie/${movieId}?${queryString}`, API_OPTION)
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Failed to fetch getMovieDetail');
+        }
+        return res.json();
+      })
       .then((result) => {
-        console.log(result);
-
-        if (!result) return;
+        console.log('@@ result', result);
 
         insertMovieDetail({
           selector: '#detailPage',
