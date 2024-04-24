@@ -22,7 +22,8 @@ export const getMovieDetail = () => {
         insertMovieDetail({
           selector: '#detailPage',
           data: result
-        }).then(() => hideLoadingOverlay());
+        });
+        hideLoadingOverlay();
       })
       .catch(err => {
         console.error(err);
