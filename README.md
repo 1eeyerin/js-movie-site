@@ -16,6 +16,7 @@ This project uses the [TMDB API](https://developer.themoviedb.org/reference/intr
 - [x] UI 변경 모드 추가
 - [ ] 모바일 Hover UI 제거
 - [ ] 썸네일 이미지 사이즈 통일
+- [ ] includeHtml 리팩토링
 - [ ] customCursor 리팩토링
 
 ## 💬 Author
