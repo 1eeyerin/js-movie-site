@@ -2,7 +2,6 @@ import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {getQueryParamValue} from "../utils/getQueryString.js";
 import {insertMovieDetail} from "../movieDetail.js";
-import hideLoadingOverlay from "../hideLoadingOverlay.js";
 
 export const getMovieDetail = async () => {
   const movieId = getQueryParamValue('movieId');
@@ -25,6 +24,5 @@ export const getMovieDetail = async () => {
     })
     .catch(err => {
       console.error(err);
-    })
-    .finally(() => hideLoadingOverlay());
+    });
 }
