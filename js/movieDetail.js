@@ -30,10 +30,12 @@ const insertMovieDetail = ({ selector, data }) => {
     date.textContent = `(${data.release_date.slice(0, 4)})`;
     topInfoSection.appendChild(date);
 
-    const summary = document.createElement('p');
-    summary.classList.add('detail-summary');
-    summary.textContent = data.overview;
-    topInfoSection.appendChild(summary);
+    if (!!data.overview) {
+      const summary = document.createElement('p');
+      summary.classList.add('detail-summary');
+      summary.textContent = data.overview;
+      topInfoSection.appendChild(summary);
+    }
 
     const bottomInformation = document.createElement('ul');
     bottomInformation.classList.add('detail-bottom-information');
