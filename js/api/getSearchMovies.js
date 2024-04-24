@@ -16,7 +16,12 @@ export const getSearchMovies = () => {
   const queryString = objectToQueryString(queryOptions);
 
   return fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Failed to fetch getNowPlayingMovies');
+      }
+      return res.json();
+    })
     .then(({results}) => {
       console.log(results);
       const normalizeResults = setMoviesResponseNormalized(results);

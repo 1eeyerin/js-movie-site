@@ -7,7 +7,12 @@ export const getNowPlayingMovies = () => {
     const queryString = objectToQueryString(DEFAULT_QUERIES);
 
     return fetch(`${API_MAIN_PATH}movie/now_playing?${queryString}`, API_OPTION)
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Failed to fetch getNowPlayingMovies');
+        }
+        return res.json();
+      })
       .then(({results}) => {
         console.log(results);
 
