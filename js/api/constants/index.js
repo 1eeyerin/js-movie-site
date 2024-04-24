@@ -14,5 +14,6 @@ const API_OPTION = {
     accept: 'application/json',
     Authorization: `Bearer ${AUTH_KEY}`}
 };
+const KOR_DATE_FORMAT = { year: 'numeric', month: 'long', day: 'numeric' };
 
-export {AUTH_KEY, IMG_PATH, API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION};
+export {AUTH_KEY, IMG_PATH, API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION, KOR_DATE_FORMAT};
