@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", (() => {
   includeHTML(() => {
     common();
     onGoBack();
-    getMovieDetail();
-    customCursor();
+    
+    getMovieDetail()
+      .then(() =>  customCursor());
   });
 }));
 

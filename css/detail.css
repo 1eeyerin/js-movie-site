@@ -84,6 +84,7 @@ main {
     font-size: 65px;
     display: block;
     line-height: 1.2;
+    word-break: keep-all;
 }
 
 .top-info-section .detail-thumbnail {
