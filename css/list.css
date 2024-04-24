@@ -80,3 +80,11 @@
     font-size: var(--text-size2);
     margin-top: 10px;
 }
+
+/* ----------------------------------------------------- */
+
+@media (max-width: 1199px) {
+    .movie-cards a:hover .movie-info {
+        display: none;
+    }
+}
