@@ -4,12 +4,12 @@ import {getMovieDetail} from "../api/getMovieDetail.js";
 import customCursor from "../customCursor.js";
 
 document.addEventListener("DOMContentLoaded", (() => {
-  includeHTML(() => {
+  includeHTML(async () => {
     common();
     onGoBack();
     
-    getMovieDetail()
-      .then(() =>  customCursor());
+    await getMovieDetail();
+    await customCursor();
   });
 }));
 
