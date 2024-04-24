@@ -112,7 +112,7 @@ main {
 }
 
 .top-info-section .detail-thumbnail:hover {
-    transform: scale(2) translate3d(10px, -10px, 0);
+    transform: scale(1.8) translate3d(10px, -10px, 0);
 }
 
 .top-info-section .detail-summary {
