@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", (() => {
   includeHTML(async () => {
     common();
     onGoBack();
-    
     await getMovieDetail();
     await customCursor();
   });

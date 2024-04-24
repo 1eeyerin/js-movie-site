@@ -5,16 +5,12 @@ import onSearch from "./search/onSearch.js";
 import customCursor from "./customCursor.js";
 
 document.addEventListener("DOMContentLoaded", (() => {
-  includeHTML(() => {
+  includeHTML(async () => {
     common();
     onSearch();
-
-    getMoviesWithPromiseAll()
-      .then(() => customCursor());
+    await getPopularMovies();
+    await getNowPlayingMovies();
+    await customCursor();
   });
 }));
-
-const getMoviesWithPromiseAll = () => {
-  return Promise.all([getPopularMovies(), getNowPlayingMovies()]);
-}
 

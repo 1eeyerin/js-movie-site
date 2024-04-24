@@ -6,13 +6,12 @@ import onSearch from "./onSearch.js";
 import customCursor from "../customCursor.js";
 
 document.addEventListener("DOMContentLoaded", (() => {
-  includeHTML(() => {
+  includeHTML(async () => {
     common();
     onSearch();
     setSearchKeyword();
-
-    getSearchMovies()
-      .then(() => customCursor());
+    await getSearchMovies();
+    await customCursor();
   });
 }));
 

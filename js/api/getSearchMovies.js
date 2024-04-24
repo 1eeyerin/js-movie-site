@@ -5,8 +5,7 @@ import {createMovieCard, createMovieList} from "../movieList.js";
 import emptySearchResult from "../search/emptySearchResult.js";
 import setMoviesResponseNormalized from "../utils/setMoviesResponseNormalized.js";
 
-export const getSearchMovies = () => {
-  return new Promise((resolve) => {
+export const getSearchMovies = async () => {
   const searchWord = getQueryParamValue('query');
   const queryOptions = {
     ...DEFAULT_QUERIES,
@@ -15,7 +14,7 @@ export const getSearchMovies = () => {
 
   const queryString = objectToQueryString(queryOptions);
 
-  return fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
+  await fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
     .then(res => {
       if (!res.ok) {
         throw new Error('Failed to fetch getNowPlayingMovies');
@@ -35,7 +34,5 @@ export const getSearchMovies = () => {
         emptyElementFunc: emptySearchResult
       });
     })
-    .catch(err => console.error(err))
-    .finally(() => resolve(true));
-  });
+    .catch(err => console.error(err));
 }
