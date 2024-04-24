@@ -1,4 +1,4 @@
-import {IMG_PATH} from "./api/constants";
+import {IMG_PATH} from "./api/constants/index.js";
 
 const insertMovieDetail = ({ selector, data }) => {
   const fragment = new DocumentFragment();
