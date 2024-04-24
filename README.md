@@ -18,6 +18,7 @@ This project uses the [TMDB API](https://developer.themoviedb.org/reference/intr
 - [ ] 썸네일 이미지 사이즈 통일
 - [x] includeHtml 리팩토링
 - [x] customCursor 리팩토링
+- [x] movie-detail에 gsap(js animate) 넣기
 
 ## 💬 Author
 [yerin lee](https://github.com/1eeyerin)
