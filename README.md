@@ -21,6 +21,7 @@ This project uses the [TMDB API](https://developer.themoviedb.org/reference/intr
 - [x] movie-detail에 gsap(js animate) 넣기
 - [ ] lottie 적용하기
 - [ ] DocumentFragment 다시 한번 적용해보기.. 뭔가 잘못 넣은 것 같음
+- [x] 상세페이지 로딩화면 추가
 
 ## 💬 Author
 [yerin lee](https://github.com/1eeyerin)
