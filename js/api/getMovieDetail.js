@@ -2,6 +2,7 @@ import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {getQueryParamValue} from "../utils/getQueryString.js";
 import {insertMovieDetail} from "../movieDetail.js";
+import {appendHtml} from "../utils/includeHTML.js";
 
 export const getMovieDetail = async () => {
   const movieId = getQueryParamValue('movieId');
@@ -24,5 +25,6 @@ export const getMovieDetail = async () => {
     })
     .catch(err => {
       console.error(err);
+      appendHtml('#detailPage', '../../html/not-found.html');
     });
-}
+};
