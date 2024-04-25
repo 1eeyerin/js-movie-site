@@ -1,7 +1,6 @@
 import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {createMovieCard, createMovieList} from "../movieList.js";
-import hideSkeletonList from "../hideSkeletonList.js";
 
 export const getNowPlayingMovies = async () => {
   const queryString = objectToQueryString(DEFAULT_QUERIES);
@@ -21,7 +20,6 @@ export const getNowPlayingMovies = async () => {
         selector: '#playingListSection',
         createElementFunc: createMovieCard
       });
-      hideSkeletonList('#playingListSection');
     })
     .catch(err => console.error(err));
 };

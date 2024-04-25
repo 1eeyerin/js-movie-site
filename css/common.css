@@ -200,7 +200,6 @@ body {
 .skeleton-wrap.carousel .skeleton-cards {
     display: flex;
     gap: 12px;
-    overflow-x: auto;
     width: 103%;
 }
 
