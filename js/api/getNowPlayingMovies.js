@@ -14,8 +14,6 @@ export const getNowPlayingMovies = async () => {
       return res.json();
     })
     .then(({results}) => {
-      console.log(results);
-
       createMovieList({
         data: results,
         isRandom: true,
