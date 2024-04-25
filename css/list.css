@@ -29,14 +29,24 @@
     color: var(--color-gray0);
     font-size: var(--title-size1);
 }
+.movie-cards li {
+    border-radius: 50px;
+    background: linear-gradient(90deg, #f2f2f2, #e6e6e6, #f2f2f2);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
 .movie-cards a {
     border-radius: 50px;
     overflow: hidden;
     position: relative;
     display: block;
+    aspect-ratio: 2 / 3;
 }
 .movie-cards img {
     display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* ----------------------------------------------------- */
@@ -45,11 +55,9 @@
     display: flex;
     gap: 12px;
     overflow-x: auto;
-    width: 103%;
 }
 
-.movie-cards.carousel img {
-    max-width: unset;
+.movie-cards.carousel a {
     width: 200px;
 }
 
