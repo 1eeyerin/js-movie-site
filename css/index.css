@@ -1,3 +1,9 @@
 main {
     padding: 0 3% 100px;
 }
+
+#popularListSection {
+    height: 405px;
+    overflow: hidden;
+    margin-right: -3.5%;
+}
