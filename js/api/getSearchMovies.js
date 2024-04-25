@@ -22,7 +22,6 @@ export const getSearchMovies = async () => {
       return res.json();
     })
     .then(({results}) => {
-      console.log(results);
       const normalizeResults = setMoviesResponseNormalized(results);
 
       createMovieList({

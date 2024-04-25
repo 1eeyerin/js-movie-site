@@ -13,26 +13,30 @@ const createMovieList = ({
     return false;
   }
 
-  if (!data?.length) {
-    return emptyElementFunc?.(selector);
-  }
+  if (!data?.length) return emptyElementFunc?.(selector);
+  if (isRandom) data.sort(() => Math.random() - 0.5);
 
-  if (isRandom) {
-    data.sort(() => Math.random() - 0.5);
-  }
+  const fragment = document.createDocumentFragment();
+  const $target = document.querySelector(selector);
+  const container = document.createElement('div');
 
-  const section = document.querySelector(selector);
   const list = document.createElement('ul');
+  list.className = `movie-cards ${isCarousel ? 'swiper-wrapper carousel' : 'list'}`;
 
-  section.appendChild(list);
-  list.classList.add('movie-cards', isCarousel ? 'carousel' : 'list');
+  if (isCarousel) {
+    container.classList.add('swiper-container');
+  }
 
-  data.forEach((movie) => list.appendChild(createElementFunc(movie)));
+  data.forEach((movie) => fragment.appendChild(createElementFunc(movie, isCarousel)));
+
+  list.appendChild(fragment);
+  container.appendChild(list);
+  $target.appendChild(container);
 }
 
-const createMovieCard = (movie) => {
-  const listItem = document.createElement('li');
-  listItem.classList.add('contents');
+const createMovieCard = (movie, isCarousel) => {
+  const li = document.createElement('li');
+  li.className = `contents${isCarousel ? ' swiper-slide': ''}`;
 
   const link = document.createElement('a');
   link.href = `./detail.html?movieId=${movie.id}`;
@@ -52,9 +56,9 @@ const createMovieCard = (movie) => {
   movieInfo.appendChild(title);
   link.appendChild(image);
   link.appendChild(movieInfo);
-  listItem.appendChild(link);
+  li.appendChild(link);
 
-  return listItem;
+  return li;
 }
 
 export { createMovieList, createMovieCard };

@@ -2,7 +2,7 @@ import {IMG_PATH, KOR_DATE_FORMAT} from "./api/constants/index.js";
 
 const insertMovieDetail = ({ selector, data }) => {
   const fragment = new DocumentFragment();
-  const wrapper = document.querySelector(selector);
+  const $wrapper = document.querySelector(selector);
 
   const featureSection = document.createElement('section');
   const topInfoSection = document.createElement('section');
@@ -64,9 +64,9 @@ const insertMovieDetail = ({ selector, data }) => {
   });
 
   topInfoSection.appendChild(bottomInformation);
-  fragment.appendChild(featureSection).appendChild(topInfoSection);
-
-  wrapper.appendChild(fragment);
+  fragment.appendChild(featureSection);
+  fragment.appendChild(topInfoSection);
+  $wrapper.appendChild(fragment);
 };
 
 export { insertMovieDetail };
