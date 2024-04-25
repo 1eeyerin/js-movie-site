@@ -16,8 +16,6 @@ export const getMovieDetail = async () => {
       return res.json();
     })
     .then((result) => {
-      console.log('@@ result', result);
-
       insertMovieDetail({
         selector: '#detailPage',
         data: result

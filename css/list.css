@@ -51,14 +51,9 @@
 
 /* ----------------------------------------------------- */
 
-.movie-cards.carousel {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-}
-
-.movie-cards.carousel a {
+.movie-cards.carousel li {
     width: 200px;
+    margin-right: 12px;
 }
 
 /* ----------------------------------------------------- */
