@@ -169,6 +169,47 @@ body {
     padding-top: 20px;
 }
 
+.skeleton-wrap .skeleton-cards li {
+    border-radius: 50px;
+    flex-shrink: 0;
+    background: #f2f2f2;
+    background: linear-gradient(90deg, #f2f2f2, #e6e6e6, #f2f2f2);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.skeleton-wrap.carousel .skeleton-cards li {
+    width: 200px;
+    height: 300px;
+}
+
+.skeleton-wrap.list .skeleton-cards li {
+    width: calc(50% - 6px);
+    height: 343px;
+}
+
+.skeleton-wrap.carousel .skeleton-cards {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    width: 103%;
+}
+
+.skeleton-wrap.list .skeleton-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 /* ----------------------------------------------------- */
 
 .main-dim {
