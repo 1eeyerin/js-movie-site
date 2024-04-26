@@ -56,8 +56,7 @@ gsap @3.12.5
 > <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/58d8ba1c-f24a-4417-8c86-38d2327fc6ae" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/utils/includeHTML.js#L28)
 
-- 검색 결과 api 데이터는 받았으나, api 제공 사이트의 기타 이유로 상세 데이터는 없는 경우가 있었습니다.
-- 또한 기타 등등의 api 에러를 발생 했을 때의 화면을 제공할 수 있도록 하였습니다.
+- api 에러를 발생 했을 때의 화면을 제공할 수 있도록 하였습니다.
 - lottie js 라이브러리를 사용하여, 애니메이션 화면을 제공하였습니다.
 - fetch error를 catch 하는 경우, 현재 화면 element에 not-found.html을 append 하도록 구성하였습니다.
   
