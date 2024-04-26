@@ -46,14 +46,14 @@ gsap @3.12.5
 
 ### 4. 검색 결과가 없는 경우 UI 제공
 
-> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/4bf5cd8a-2853-41d3-ae0e-2f4552728aac" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/deb93a2b-be7c-4cc8-9ac9-5301eb54eb19" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/search/emptySearchResult.js)
 
 - 검색 결과가 없음을 나타내는 UI를 추가하였습니다.
 
 ### 5. 상세페이지 fetch 에러시, not-found 에러페이지 제공
 
-> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/deb93a2b-be7c-4cc8-9ac9-5301eb54eb19" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/58d8ba1c-f24a-4417-8c86-38d2327fc6ae" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/utils/includeHTML.js#L28)
 
 - 검색 결과 api 데이터는 받았으나, api 제공 사이트의 기타 이유로 상세 데이터는 없는 경우가 있었습니다.
