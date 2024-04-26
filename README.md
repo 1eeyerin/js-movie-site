@@ -19,7 +19,6 @@ gsap @3.12.5
 
 ## 3. 상세기능
 
-
 ### 1. 커스텀 커서
 
 > <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/52f42699-1df5-4d7f-a15c-a60bc7781b19" width="350"><br/>
@@ -33,28 +32,28 @@ gsap @3.12.5
 
 ### 2. 영화 데이터 랜덤 정렬
 
-> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/4d9f2ba6-ce9f-4913-8d0d-74442c5c2065" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/d29650d1-3f27-4c63-882f-ff5c89a15cc8" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/movieList.js#L17)
 
 - 다양한 영화를 탐색할 수 있도록, 영화 데이터를 랜덤으로 정렬될 수 있도록 구현하였습니다.
 
 ### 3. 상세페이지 애니메이션 적용
 
-> <img src="https://i.imgur.com/7qCHkQw.gif" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/4d761b15-15d3-4409-a77a-ba433866e42e" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/detail/setPageAnimate.js)
 
 - 영화 컨텐츠에 몰입할 수 있도록 gsap.js animation 라이브러리를 사용하여 비주얼 애니메이션 요소를 추가하였습니다.
 
 ### 4. 검색 결과가 없는 경우 UI 제공
 
-> <img src="https://i.imgur.com/pBVaqYH.png" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/4bf5cd8a-2853-41d3-ae0e-2f4552728aac" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/search/emptySearchResult.js)
 
 - 검색 결과가 없음을 나타내는 UI를 추가하였습니다.
 
 ### 5. 상세페이지 fetch 에러시, not-found 에러페이지 제공
 
-> <img src="https://i.imgur.com/5b0nGGH.gif" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/58d8ba1c-f24a-4417-8c86-38d2327fc6ae" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/utils/includeHTML.js#L28)
 
 - 검색 결과 api 데이터는 받았으나, api 제공 사이트의 기타 이유로 상세 데이터는 없는 경우가 있었습니다.
@@ -65,7 +64,7 @@ gsap @3.12.5
 
 ### 6. 상세페이지 loading page 적용
 
-> <img src="https://i.imgur.com/OSOrzto.gif" width="330"><br/>
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/cd75172a-169b-4607-ba79-fa609bcf06ca" width="330"><br/>
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/hideLoadingOverlay.js)
 
 - 데이터 fetch 중에도 부드러운 화면 전환 경험을 제공할 수 있도록, css animation을 이용하여 loading page를 적용하였습니다.
