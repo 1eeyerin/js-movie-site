@@ -14,7 +14,7 @@ export const getSearchMovies = async () => {
 
   const queryString = objectToQueryString(queryOptions);
 
-  await fetch(`${API_MAIN_PATH}search/collection?${queryString}`, API_OPTION)
+  await fetch(`${API_MAIN_PATH}search/movie?${queryString}`, API_OPTION)
     .then(res => {
       if (!res.ok) {
         throw new Error('Failed to fetch getNowPlayingMovies');
