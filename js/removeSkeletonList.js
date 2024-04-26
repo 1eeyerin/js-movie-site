@@ -1,4 +1,4 @@
-const hideSkeletonList = (selector) => {
+const removeSkeletonList = (selector) => {
   const skeleton = document.querySelector(`${selector} .skeleton-wrap`);
 
   const hideSkeleton = setTimeout(() => {
@@ -8,4 +8,4 @@ const hideSkeletonList = (selector) => {
   }, 500);
 };
 
-export default hideSkeletonList;
+export default removeSkeletonList;

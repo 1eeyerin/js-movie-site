@@ -1,19 +1,19 @@
 import {IMG_PATH} from "./api/constants/index.js";
 
-const createMovieList = ({
+const renderMovieList = ({
   data,
   isRandom = false,
   selector,
   isCarousel = false,
-  createElementFunc,
-  emptyElementFunc,
+  renderChildElement,
+  renderNoResultElement,
 }) => {
-  if (!selector || typeof createElementFunc !== 'function') {
-    console.error('createMovieList에 필수 매개변수가 없습니다.');
+  if (!selector || typeof renderChildElement !== 'function') {
+    console.error('renderMovieList에 필수 매개변수가 없습니다.');
     return false;
   }
 
-  if (!data?.length) return emptyElementFunc?.(selector);
+  if (!data?.length) return renderNoResultElement?.(selector);
   if (isRandom) data.sort(() => Math.random() - 0.5);
 
   const $target = document.querySelector(selector);
@@ -26,13 +26,13 @@ const createMovieList = ({
     container.classList.add('swiper-container');
   }
 
-  data.forEach((movie) => list.appendChild(createElementFunc(movie, isCarousel)));
+  data.forEach((movie) => list.appendChild(renderChildElement(movie, isCarousel)));
 
   container.appendChild(list);
   $target.appendChild(container);
 }
 
-const createMovieCard = (movie, isCarousel) => {
+const renderMovieCard = (movie, isCarousel) => {
   const li = document.createElement('li');
   li.className = `contents${isCarousel ? ' swiper-slide': ''}`;
 
@@ -59,4 +59,4 @@ const createMovieCard = (movie, isCarousel) => {
   return li;
 }
 
-export { createMovieList, createMovieCard };
+export { renderMovieList, renderMovieCard };

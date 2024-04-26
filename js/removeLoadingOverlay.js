@@ -1,4 +1,4 @@
-const hideLoadingOverlay = () => {
+const removeLoadingOverlay = () => {
   const loadingOverlay = document.getElementById('loadingPage');
 
   const hideOverlay = setTimeout(() => {
@@ -8,4 +8,4 @@ const hideLoadingOverlay = () => {
   }, 500);
 }
 
-export default hideLoadingOverlay;
+export default removeLoadingOverlay;

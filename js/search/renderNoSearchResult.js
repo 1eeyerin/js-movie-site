@@ -1,4 +1,4 @@
-const emptySearchResult = (selector) => {
+const renderNoSearchResult = (selector) => {
   if (!selector) return false;
 
   const section = document.querySelector(selector);
@@ -14,4 +14,4 @@ const emptySearchResult = (selector) => {
   return section.appendChild(div);
 };
 
-export default emptySearchResult;
+export default renderNoSearchResult;

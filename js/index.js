@@ -3,7 +3,7 @@ import includeHTML from './utils/includeHTML.js';
 import common from "./common.js";
 import onSearch from "./search/onSearch.js";
 import customCursor from "./customCursor.js";
-import hideSkeletonList from "./hideSkeletonList.js";
+import removeSkeletonList from "./removeSkeletonList.js";
 
 document.addEventListener("DOMContentLoaded", (() => {
   includeHTML(async () => {
@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", (() => {
     await getPopularMovies();
     await getNowPlayingMovies();
     await customCursor();
-    hideSkeletonList('#popularListSection');
-    hideSkeletonList('#playingListSection');
+    removeSkeletonList('#popularListSection');
+    removeSkeletonList('#playingListSection');
 
     new Swiper(`#popularListSection .swiper-container`, {
       slidesPerView: 'auto',
