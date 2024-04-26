@@ -2,7 +2,7 @@ import includeHTML from "../utils/includeHTML.js";
 import common from "../common.js";
 import {getMovieDetail} from "../api/getMovieDetail.js";
 import customCursor from "../customCursor.js";
-import hideLoadingOverlay from "../hideLoadingOverlay.js";
+import removeLoadingOverlay from "../removeLoadingOverlay.js";
 import setPageAnimate from "./setPageAnimate.js";
 
 document.addEventListener("DOMContentLoaded", (() => {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (() => {
     onGoBack();
     await getMovieDetail();
     await customCursor();
-    await hideLoadingOverlay();
+    await removeLoadingOverlay();
     setPageAnimate();
   });
 }));

@@ -1,8 +1,8 @@
 import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
 import {getQueryParamValue} from "../utils/getQueryString.js";
-import {createMovieCard, createMovieList} from "../movieList.js";
-import emptySearchResult from "../search/emptySearchResult.js";
+import {renderMovieCard, renderMovieList} from "../renderMovieList.js";
+import renderNoSearchResult from "../search/renderNoSearchResult.js";
 import setMoviesResponseNormalized from "../utils/setMoviesResponseNormalized.js";
 
 export const getSearchMovies = async () => {
@@ -24,13 +24,13 @@ export const getSearchMovies = async () => {
     .then(({results}) => {
       const normalizeResults = setMoviesResponseNormalized(results);
 
-      createMovieList({
+      renderMovieList({
         data: normalizeResults,
         isRandom: false,
         isCarousel: false,
         selector: '#searchListSection',
-        createElementFunc: createMovieCard,
-        emptyElementFunc: emptySearchResult
+        renderChildElement: renderMovieCard,
+        renderNoResultElement: renderNoSearchResult
       });
     })
     .catch(err => console.error(err));

@@ -1,6 +1,6 @@
 import {IMG_PATH, KOR_DATE_FORMAT} from "./api/constants/index.js";
 
-const insertMovieDetail = ({ selector, data }) => {
+const renderMovieDetail = ({ selector, data }) => {
   const fragment = new DocumentFragment();
   const $wrapper = document.querySelector(selector);
 
@@ -69,4 +69,4 @@ const insertMovieDetail = ({ selector, data }) => {
   $wrapper.appendChild(fragment);
 };
 
-export { insertMovieDetail };
+export default renderMovieDetail;

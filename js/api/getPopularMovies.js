@@ -1,6 +1,6 @@
 import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
-import {createMovieCard, createMovieList} from "../movieList.js";
+import {renderMovieCard, renderMovieList} from "../renderMovieList.js";
 
 export const getPopularMovies = async () => {
   const queryString = objectToQueryString(DEFAULT_QUERIES);
@@ -13,12 +13,12 @@ export const getPopularMovies = async () => {
       return res.json();
     })
     .then(({results}) => {
-      createMovieList({
+      renderMovieList({
         data: results,
         isRandom: true,
         isCarousel: true,
         selector: '#popularListSection',
-        createElementFunc: createMovieCard
+        renderChildElement: renderMovieCard
       });
     })
     .catch(err => console.error(err));
