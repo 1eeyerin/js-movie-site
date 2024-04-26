@@ -43,6 +43,7 @@ gsap @3.12.5
 > [🔗 코드 바로가기](https://github.com/1eeyerin/js-movie-site/blob/8a64a2a6e1070a88719a23315335313b9c8aadc0/js/detail/setPageAnimate.js)
 
 - 영화 컨텐츠에 몰입할 수 있도록 gsap.js animation 라이브러리를 사용하여 비주얼 애니메이션 요소를 추가하였습니다.
+- 제공하는 메서드인 timeline()을 이용하여 가변적인 제목이라도, 제목 애니메이션이 끝날 때까지 summary text 애니메이션이 대기하도록 하였습니다.
 
 ### 4. 검색 결과가 없는 경우 UI 제공
 
