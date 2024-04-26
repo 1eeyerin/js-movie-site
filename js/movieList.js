@@ -16,7 +16,6 @@ const createMovieList = ({
   if (!data?.length) return emptyElementFunc?.(selector);
   if (isRandom) data.sort(() => Math.random() - 0.5);
 
-  const fragment = document.createDocumentFragment();
   const $target = document.querySelector(selector);
   const container = document.createElement('div');
 
@@ -27,9 +26,8 @@ const createMovieList = ({
     container.classList.add('swiper-container');
   }
 
-  data.forEach((movie) => fragment.appendChild(createElementFunc(movie, isCarousel)));
+  data.forEach((movie) => list.appendChild(createElementFunc(movie, isCarousel)));
 
-  list.appendChild(fragment);
   container.appendChild(list);
   $target.appendChild(container);
 }
