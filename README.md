@@ -21,6 +21,20 @@ gsap @3.12.5
 
 <br/>
 
+> <img src="https://i.imgur.com/5b0nGGH.gif" width="350"><br/>
+
+> <img src="https://i.imgur.com/pBVaqYH.png" width="350"><br/>
+
+> <img src="https://i.imgur.com/OSOrzto.gif" width="350"><br/>
+
+> <img src="https://i.imgur.com/7qCHkQw.gif" width="350"><br/>
+
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/4d9f2ba6-ce9f-4913-8d0d-74442c5c2065" width="350"><br/>
+
+> <img src="https://github.com/1eeyerin/js-movie-site/assets/40863185/52f42699-1df5-4d7f-a15c-a60bc7781b19" width="350"><br/>
+
+
+
 ### 1. -
 
 <br/>
