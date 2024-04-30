@@ -1,6 +1,6 @@
 import {objectToQueryString} from "../utils/objectToQueryString.js";
 import {API_MAIN_PATH, DEFAULT_QUERIES, API_OPTION} from "./constants/index.js";
-import {renderMovieCard, renderMovieList} from "../renderMovieList.js";
+import {renderMovieCardText, renderMovieList} from "../renderMovieList.js";
 
 export const getNowPlayingMovies = async () => {
   const queryString = objectToQueryString(DEFAULT_QUERIES);
@@ -18,7 +18,7 @@ export const getNowPlayingMovies = async () => {
         isRandom: true,
         isCarousel: false,
         selector: '#playingListSection',
-        renderChildElement: renderMovieCard
+        renderCardText: renderMovieCardText
       });
     })
     .catch(err => console.error(err));
