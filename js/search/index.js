@@ -5,15 +5,13 @@ import {getQueryParamValue} from "../utils/getQueryString.js";
 import onSearch from "./onSearch.js";
 import customCursor from "../customCursor.js";
 
-document.addEventListener("DOMContentLoaded", (() => {
-  includeHTML(async () => {
-    common();
-    onSearch();
-    setSearchKeyword();
-    await getSearchMovies();
-    await customCursor();
-  });
-}));
+includeHTML(async () => {
+  common();
+  onSearch();
+  setSearchKeyword();
+  await getSearchMovies();
+  await customCursor();
+});
 
 const setSearchKeyword = () => {
   const searchWord = getQueryParamValue('query');
